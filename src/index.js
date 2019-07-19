@@ -1,13 +1,13 @@
 import _ from "lodash";
-import myName from "./myName";
+import Header from "./Header";
+import Main from "./Main";
 
-function component() {
-  const element = document.createElement("div");
+// const CSSReset = document.documentElement;
+// CSSReset.setAttribute(
+//   "style",
+//   "background: red; margin: 0; padding: 0; box-sizing: border-box;"
+// );
 
-  //   element.innerHTML = _.join(["Hello", "webpack"], " ");
-  element.innerHTML = myName("Alain");
-
-  return element;
-}
-
-document.body.appendChild(component());
+const ROOT = document.getElementById("root");
+ROOT.appendChild(Header());
+ROOT.appendChild(Main());
