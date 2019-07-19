@@ -1,11 +1,14 @@
 const MenuOne = () => {
-  const section = document.createElement("section");
+  const div = document.createElement("div");
+  div.style.height = "20vh";
+  div.style.background = "hotpink";
+
   const h1 = document.createElement("h1");
   h1.textContent = "Menu One here";
 
-  section.appendChild(h1);
+  div.appendChild(h1);
 
-  return section;
+  return div;
 };
 
 export default MenuOne;
