@@ -14,24 +14,46 @@ const Main = () => {
   HeadSection.appendChild(h1);
 
   const menuArr = ["Menu 1", "Menu 2", "Menu 3"];
-  menuArr.forEach((menu, index) => {
+  menuArr.forEach(menu => {
     const menuBtn = document.createElement("button");
     menuBtn.textContent = menu;
+    menuBtn.setAttribute("class", "menu-links");
+    menuBtn.setAttribute("id", "menu-links");
     // Add an ID for each buttons using index.. good idea ?..
-    menuBtn.id = index;
+    // menuBtn.id = index;
 
     menuBtn.addEventListener("click", function toggleMenuTabs() {
-      if (menuBtn.id == 0) {
+      if (menuBtn.id == "menu-links") {
         HeadSection.appendChild(Menu1());
-      } else if (menuBtn.id == 1) {
+      } else if (menuBtn.className == "Menu2") {
         HeadSection.appendChild(Menu2());
-      } else if (menuBtn.id == 2) {
+      } else if (menuBtn.className == "Menu3") {
         HeadSection.appendChild(Menu3());
       }
     });
 
     HeadSection.appendChild(menuBtn);
   });
+
+  // HeadSection.appendChild(Menu1());
+  // HeadSection.appendChild(Menu2());
+  // HeadSection.appendChild(Menu3());
+
+  function openMenu(event, menuName) {
+    var i, menuContent, menuLinks;
+    menuContent = document.getElementsByClassName("menu-content");
+    for (i = 0; i < menuContent.length; i++) {
+      menuContent[i].style.display = none;
+    }
+
+    menuLinks = document.getElementsByClassName("menu-links");
+    for (i = 0; i < menuLinks.length; i++) {
+      menuLinks[i].className = menuLinks[i].className.replace(" active", "");
+    }
+
+    document.getElementById(menuName).style.display = "block";
+    event.currentTarget.className += " active";
+  }
 
   return HeadSection;
 };

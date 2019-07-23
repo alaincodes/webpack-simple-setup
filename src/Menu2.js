@@ -3,6 +3,9 @@ const MenuTwo = () => {
   div.style.height = "20vh";
   div.style.background = "gold";
 
+  div.setAttribute("id", "Menu2");
+  div.setAttribute("class", "menu-content");
+
   const h1 = document.createElement("h1");
   h1.textContent = "Menu Two here";
 
