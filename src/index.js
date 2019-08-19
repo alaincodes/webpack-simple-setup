@@ -1,7 +1,7 @@
 import Header from "./Header";
-import Main from "./Main";
+import menuTabs from "./menuTabs";
 import "./styles.css";
 
 const ROOT = document.getElementById("root");
 ROOT.appendChild(Header());
-ROOT.appendChild(Main());
+ROOT.appendChild(menuTabs());

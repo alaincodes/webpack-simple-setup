@@ -1,5 +1,5 @@
-import "./styles.css";
 import Octane from "./octane.png";
+import Data from "./data.xml";
 
 const MenuOne = () => {
   const div = document.createElement("div");
@@ -11,7 +11,6 @@ const MenuOne = () => {
 
   const h1 = document.createElement("h1");
   h1.textContent = "Menu One here";
-  h1.classList.add("hello");
 
   const myImage = new Image();
   myImage.src = Octane;
@@ -19,6 +18,8 @@ const MenuOne = () => {
   div.appendChild(myImage);
 
   div.appendChild(h1);
+
+  console.log(Data);
 
   return div;
 };
