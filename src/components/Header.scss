@@ -1,0 +1,19 @@
+nav {
+  min-height: 9vh;
+  background: pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    li {
+      margin: 1rem;
+      cursor: pointer;
+    }
+  }
+}

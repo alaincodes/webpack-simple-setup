@@ -1,4 +1,4 @@
-import newMenu from "./createMenu";
+import createMenu from "./createMenu";
 
 const displayMenu = event => {
   const menuTitleContainer = document.getElementById("root");
@@ -9,7 +9,7 @@ const displayMenu = event => {
 
   switch (event.target.id) {
     case "menuOne":
-      menuTabs.innerHTML = menuOne;
+      menuTabs.appendChild(createMenu());
       break;
     case "menuTwo":
       menuTitle.innerHTML = `<p>Menu 2</p>`;
@@ -22,7 +22,5 @@ const displayMenu = event => {
   menuTabs.appendChild(menuTitle);
   menuTitleContainer.appendChild(menuTabs);
 };
-
-const menuOne = newMenu("Menu 1", "Cheese");
 
 export default displayMenu;

@@ -1,6 +1,6 @@
-import Header from "./Header";
-import menuTabs from "./menuTabs";
-import "./styles.css";
+import Header from "./components/Header";
+import menuTabs from "./components/menuTabs";
+import "./styles.scss";
 
 const ROOT = document.getElementById("root");
 ROOT.appendChild(Header());
